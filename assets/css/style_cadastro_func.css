@@ -147,7 +147,8 @@
 
 .cadastro-heading{
     font-size: 5rem;
-    color: var(--black-color)
+    color: var(--black-color);
+    margin-bottom: 10rem;
 }
 
 .cadastro-form{
