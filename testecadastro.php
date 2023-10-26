@@ -1,3 +1,34 @@
+<?php
+//inicia uma sessão para que os parametros fiquem temporariamente salvos, até que seja inseridos no banco.
+session_start();
+
+//é iniciado assim que o submit button é acionado.
+if (isset($_POST["submit"])){
+
+    include_once("conexao.php");
+
+    $nome = $_POST["name"];
+    $cpf = $_POST["cpf-number"];
+    $cargo = $_POST["occupation"];
+    $salario = $_POST["salary"];
+    $date = $_POST["date"];
+    $obs = $_POST["obs"];
+
+
+    $resultado = mysqli_query($conexao, "INSERT INTO funcionarios(nome,cpf,cargo,salario,date,obs) values ('$nome','$cpf','$cargo','$salario','$date','$obs')");
+
+//pagina de destino.
+    header("Location: listagem_funcionarios.php");
+
+    $resultado = $conexao->query($resultado);
+}
+
+mysqli_close($conexao);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,7 +62,7 @@
 
     <div class="menu-spacing"></div>
 
-    <section class="cadastro section white-bg">
+    <section class = "cadastro section white-bg">
         <div class="main-content serviços-content">
             <h2 class="cadastro-heading">Cadastro de Funcionários</h2>
 
@@ -74,14 +105,21 @@
                     </div>
 
                 </fieldset>
-
+                
             </div>
 
         </div>
     </section>
 
+    <?php
 
-    <footer class="main-bg">
+    if(!empty($resultado)){
+        echo "Seus dados foram guardado com SUCESSO!";
+    }
+
+    ?>
+
+        <footer class="main-bg">
         <div class="footer-content">
             <ul>
                 <li>Tel: (71) 99999-9999</li>
