@@ -44,6 +44,12 @@
                         <br>
                         <br>
                         <input type="text" name="cpf" id="cpf" required>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="faltas">NÚMERO DE FALTAS</label>
+                        <br>
+                        <input type="text" name="faltas" id="faltas" required>
                         <div class="form-group buttons">
                             <br>
                             <button type="submit" name="cadastrarBotao">Cadastrar</button>
@@ -53,6 +59,7 @@
                 <?php
 
                 if (isset($_POST['cadastrarBotao'])) {
+                    require_once '../../model/falta_salario.php';
                     require_once '../../model/buscar_funcionario.php';
                     if ($funcionario) {
                 ?>
@@ -67,6 +74,7 @@
                                 <th>Cargo</th>
                                 <th>Salário</th>
                                 <th>Data Admissão</th>
+                                <th>Faltas</th>
                             </tr>
                             <tr class="listaBorda">
                                 <td><?php echo $funcionario['id']; ?></td>
@@ -75,32 +83,11 @@
                                 <td><?php echo $funcionario['cargo']; ?></td>
                                 <td>R$<?php echo $funcionario['salario']; ?></td>
                                 <td><?php echo $funcionario['data_admissao']; ?></td>
+                                <td><?php echo $funcionario['faltas']; ?></td>
                             </tr>
                         </table>
-                        <form method="post">
-                            <div class="form-group">
-                                <br>
-                                <label for="faltas">NÚMERO DE FALTAS</label>
-                                <br>
-                                <br>
-                                <input type="text" name="faltas" id="faltas" required>
-                                <div class="form-group buttons">
-                                    <br>
-                                    <button type="submit" name="cadastrarFaltasBotao">Cadastrar faltas</button>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
-                        </form>
-                        <?php
-
-                        if (isset($_POST['cadastrarFaltasBotao'])) {
-                            var_dump("CHEGOU");
-                            die();
-                            require_once '../../model/falta_salario.php';
-                        }
-                        ?>
-
+                        <br>
+                        <br>
                 <?php
                     }
                 }

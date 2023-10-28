@@ -21,9 +21,8 @@ if (isset($_POST['cpf'])) {
         $sql1->bindParam(':salario', $salario_descontado);
         $sql1->bindParam(':cpf', $cpf);
 
-        if ($sql1->execute()) {
-            echo 'Salário e faltas foram atualizadas!';
-        }
+        $sql1->execute();
+        echo 'Salário e faltas foram atualizadas!';
     }
 }
 ?>
