@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR FREQUENCY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href="../../assets/css/style_controle_frequencias.css"> 
+    <link rel="stylesheet" href="../../assets/css/styleListagem.css">
 </head>
+
 <body class="main-bg">
-    <aside class= "menu white-bg">
+    <aside class="menu white-bg">
         <div class=" main-content menu-content">
             <h1>
                 <a href="#home"><img src="../../assets/img/main-logo.png" alt=""></a>
@@ -23,30 +26,87 @@
                     <li><a href="../pages/controle_frequencias.php">CONTROLE DE FREQUÊNCIA</a></li>
                 </ul>
             </nav>
-        </div>   
+        </div>
     </aside>
+
+    <div class="menu-spacing"></div>
+
 
     <section id="home" class="intro section title-bg">
         <div class="section fade-bg">
-            <div></div><!-- Verificar o comportamento dessa div-->
+            <div></div>
             <div class="intro-content">
-                <div class="input-cpf">
-                    <label for="cpf">Informe o cpf do Funcionário: </label>
-                    <input type="text" name="cpf" id="cpf">
-                </div>
-                <H4>Funcionário</H4>
-                <div class="data-func"><!-- Dados do objeto funcionário-->
-                    <p>Lucas Ferraz</p>
-                    <p>Desenvolvedor Java</p>
-                    <p>99999999999</p>
-                    <p>01/10/2020</p>
+                <h2 id="listah1">CONTROLE DE FREQUÊNCIA</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <br>
+                        <label for="cpf">CPF DO FUNCIONÁRIO (SOMENTE NUMEROS)</label>
+                        <br>
+                        <br>
+                        <input type="text" name="cpf" id="cpf" required>
+                        <div class="form-group buttons">
+                            <br>
+                            <button type="submit" name="cadastrarBotao">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+                <?php
 
-                </div>
-                
-            </div>
-        </div>
+                if (isset($_POST['cadastrarBotao'])) {
+                    require_once '../../model/buscar_funcionario.php';
+                    if ($funcionario) {
+                ?>
+                        <br>
+                        <br>
+                        <h2>DADOS DO FUNCIONÁRIO</h2>
+                        <table class="listaBorda">
+                            <tr class="listaBorda">
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Cargo</th>
+                                <th>Salário</th>
+                                <th>Data Admissão</th>
+                            </tr>
+                            <tr class="listaBorda">
+                                <td><?php echo $funcionario['id']; ?></td>
+                                <td><?php echo $funcionario['nome']; ?></td>
+                                <td><?php echo $funcionario['cpf']; ?></td>
+                                <td><?php echo $funcionario['cargo']; ?></td>
+                                <td>R$<?php echo $funcionario['salario']; ?></td>
+                                <td><?php echo $funcionario['data_admissao']; ?></td>
+                            </tr>
+                        </table>
+                        <form method="post">
+                            <div class="form-group">
+                                <br>
+                                <label for="faltas">NÚMERO DE FALTAS</label>
+                                <br>
+                                <br>
+                                <input type="text" name="faltas" id="faltas" required>
+                                <div class="form-group buttons">
+                                    <br>
+                                    <button type="submit" name="cadastrarFaltasBotao">Cadastrar faltas</button>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                        <?php
+
+                        if (isset($_POST['cadastrarFaltasBotao'])) {
+                            var_dump("CHEGOU");
+                            die();
+                            require_once '../../model/falta_salario.php';
+                        }
+                        ?>
+
+                <?php
+                    }
+                }
+                ?>
     </section>
-    
+
     <footer class="main-bg">
         <div class="footer-content">
             <ul>
@@ -62,4 +122,5 @@
     </footer>
 
 </body>
+
 </html>

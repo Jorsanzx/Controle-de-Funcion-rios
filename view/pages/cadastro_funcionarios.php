@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,22 +46,22 @@
 
                         <div class="form-group">
                             <label for="cpf-number">CPF (SOMENTE NUMEROS)</label>
-                            <input type="text" name="cpf" id="cpf-number" placeholder="CPF" required>
+                            <input type="text" name="cpf" id="cpf" placeholder="CPF" required>
                         </div>
 
                         <div class="form-group">
                             <label for="occupation">Cargo</label>
-                            <input type="text" name="cargo" id="occupation" placeholder="Cargo" required>
+                            <input type="text" name="cargo" id="cargo" placeholder="Cargo" required>
                         </div>
 
                         <div class="form-group">
                             <label for="salary">Salario</label>
-                            <input type="text" name="salario" id="salary" placeholder="Salário" required>
+                            <input type="text" name="salario" id="salario" placeholder="Salário" required>
                         </div>
 
                         <div class="form-group">
                             <label for="date">Data ADM</label>
-                            <input type="date" name="data_admissao" id="date" placeholder="Data de ADM." required>
+                            <input type="date" name="data_admissao" id="data_admissao" placeholder="Data de ADM." required>
                         </div>
 
                         <div class="form-group">
@@ -96,4 +97,5 @@
     </footer>
 
 </body>
+
 </html>

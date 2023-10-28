@@ -70,39 +70,39 @@
 
         if (isset($_GET['edit'])) {
           require_once '../../model/editar_funcionario.php';
-          if ($funcionarios) {
+          if ($funcionario) {
         ?>
             <br>
             <br>
             <h2>Editar Funcionário</h2>
-            
+
             <form method="post">
-            <div class="form-group">
-              <input type="text" name="nome" value="<?php echo $funcionario['nome']; ?>" placeholder="Nome">
-            </div>
+              <div class="form-group">
+                <input type="text" name="nome" value="<?php echo $funcionario['nome']; ?>" placeholder="Nome">
+              </div>
               <br>
-            <div class="form-group">
-              <input type="text" name="cpf" value="<?php echo $funcionario['cpf']; ?>" placeholder="CPF">
-            </div>
+              <div class="form-group">
+                <input type="text" name="cpf" value="<?php echo $funcionario['cpf']; ?>" placeholder="CPF">
+              </div>
               <br>
-            <div class="form-group">
-              <input type="text" name="cargo" value="<?php echo $funcionario['cargo']; ?>" placeholder="Cargo">
-            </div>
+              <div class="form-group">
+                <input type="text" name="cargo" value="<?php echo $funcionario['cargo']; ?>" placeholder="Cargo">
+              </div>
               <br>
-            <div class="form-group">
-              <input type="text" name="salario" value="<?php echo $funcionario['salario']; ?>" placeholder="Salário">
-            </div>
+              <div class="form-group">
+                <input type="text" name="salario" value="<?php echo $funcionario['salario']; ?>" placeholder="Salário">
+              </div>
               <br>
-            <div class="form-group">
-              <input type="text" name="data_admissao" value="<?php echo $funcionario['data_admissao']; ?>" placeholder="Data de Admissão">
-            </div>
+              <div class="form-group">
+                <input type="text" name="data_admissao" value="<?php echo $funcionario['data_admissao']; ?>" placeholder="Data de Admissão">
+              </div>
               <br>
-            <div class="form-group">
-              <input type="submit" value="Atualizar">
-            </div>
-            <br>
-            <br>
-            <br>
+              <div class="form-group">
+                <input type="submit" value="Atualizar">
+              </div>
+              <br>
+              <br>
+              <br>
             </form>
           <?php } else { ?>
             <p>Funcionário não encontrado.</p>
