@@ -1,6 +1,6 @@
 <?php
 
-require_once '../model/m_connection.php';
+require_once 'conexao.php';
 
 $sql = $pdo->prepare("SELECT * FROM funcionarios");
 

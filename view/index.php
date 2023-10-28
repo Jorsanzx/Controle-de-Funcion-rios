@@ -8,22 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/style_cadastro_func.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="main-bg">
     <aside class="menu white-bg">
         <div class=" main-content menu-content">
             <h1>
-                <a href="#home"><img src="../../assets/img/main-logo.png" alt=""></a>
+                <a href="#home"><img src="../assets/img/main-logo.png" alt=""></a>
             </h1>
 
             <nav>
                 <ul>
-                    <li><a href="../../view/index.html">HOME</a></li>
-                    <li><a href="../pages/listagem_funcionarios.html">LISTAGEM </a></li>
-                    <li><a href="../pages/cadastro_funcionarios.html">CADASTRO</a></li>
-                    <li><a href="../pages/controle_frequencias.html">CONTROLE DE FREQUÊNCIA</a></li>
+                    <li><a href="../view/index.php">HOME</a></li>
+                    <li><a href="../view/pages/listagem_funcionarios.php">LISTAGEM </a></li>
+                    <li><a href="../view/pages/cadastro_funcionarios.php">CADASTRO</a></li>
+                    <li><a href="../view/pages/controle_frequencias.php">CONTROLE DE FREQUÊNCIA</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,52 +31,35 @@
 
     <div class="menu-spacing"></div>
 
-    <section class="cadastro section title-bg">
-        <div class="main-content serviços-content">
-            <h2 class="cadastro-heading">Cadastro de Funcionários</h2>
 
-            <div class="cadastro-form">
-                <fieldset class="form-grid">
-
-                    <div class="form-group imput-nome">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="Nome">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cpf-number">CPF</label>
-                        <input type="text" name="cpf-number" id="cpf-number" placeholder="CPF">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="occupation">Cargo</label>
-                        <input type="text" name="occupation" id="occupation" placeholder="Cargo">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="salary">Salario</label>
-                        <input type="text" name="salary" id="salary" placeholder="Salário">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="date">Data ADM</label>
-                        <input type="date" name="date" id="date" placeholder="Data de ADM.">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="obs">Observação</label>
-                        <input type="text" name="obs" id="obs" placeholder="Obs.">
-                    </div>
-
-                    <div class="form-group buttons">
-                        <button type="submit">Salvar</button>
-                        <button type="reset" value="Reset">Limpar</button>
-                    </div>
-
-                </fieldset>
-
+    <section id="home" class="intro section title-bg">
+        <div class="section fade-bg">
+            <div></div>
+            <div class="intro-content">
+                <h2>HR FREQUENCY</h2>
+                <p> Cuidando para que você tenha agilidade e confiança no controle das frequências.</p>
             </div>
+        </div>
+    </section>
 
+    <section id="ajls" class="white-bg section">
+        <div class="business-description main-content">
+            <h2>Missão</h2>
+            <p>
+                Bem-vindo à HR FREQUENCY, líder no mercado de soluções avançadas
+                de controle de frequência de funcionários. Com uma abordagem inovadora
+                e tecnologicamente avançada, nossa empresa é dedicada a simplificar a
+                gestão de tempo e presença dos colaboradores, ajudando organizações
+                de todos os tamanhos a otimizar seus recursos humanos de maneira
+                eficiente e precisa. Nossa ampla gama de produtos e serviços oferece
+                uma variedade de opções para atender às necessidades específicas de
+                sua empresa, desde sistemas de registro de ponto tradicionais até soluções
+                de alta tecnologia baseadas em biometria e dispositivos móveis. Com a missão
+                de tornar a administração de pessoal mais eficiente e transparente, a HR FREQUENCY
+                está comprometida em fornecer a você as ferramentas necessárias
+                para maximizar a produtividade, reduzir custos e garantir o cumprimento das
+                políticas de recursos humanos.
+            </p>
         </div>
     </section>
 
