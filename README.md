@@ -18,13 +18,17 @@ CREATE TABLE funcionarios (
     faltas INT
 );
 
+# COMO EXECUTAR
+Requisitos: PHP, MySQL, XAMPP
 
-# Alimentar-tabela
+1- Baixar os arquivos como zip.
 
-INSERT INTO Funcionarios (nome, cpf, cargo, salario, data_admissao, obs) VALUES
-('Paulo', '11111111111', 'Programador Junior', 3000.00, '2023-05-20', 'Observação 1'),
-('Maria', '22222222222', 'Analista de Dados', 4500.50, '2023-04-15', 'Observação 2'),
-('João', '33333333333', 'Designer Gráfico', 2800.75, '2023-06-10', 'Observação 3'),
-('Ana', '44444444444', 'Gerente de Projetos', 5500.00, '2023-03-05', 'Observação 4');
+2- Extrair os arquivos.
 
+3- Pegar os códigos SQL acima e executar em um servidor local
 
+4- Copiar a pasta para "...\xampp\htdocs" que fica onde o XAMPP (ou outro servidor) foi instalado.
+
+5- Inicializar o servidor XAMPP (ou outro servidor).
+
+6- Abrir os arquivos as pastas pelo local host.
