@@ -1,7 +1,7 @@
 # Controle-de-Funcionarios
 CRUD de RH web feito com HTML, PHP, JS, CSS.
 
-Criado pelos por: Paulo Brezolin, Felipe Sales, Gabriel Andrade, Igor Souza, Lucas Ferraz, Jorsan e Jonathan Goncalves
+Criado por: Paulo Brezolin, Felipe Sales, Gabriel Andrade, Igor Souza, Lucas Ferraz, Jorsan e Jonathan Goncalves
 
 24/10 -> Criado styleListagem.css e iniciado a pagina listagem_funcionarios.html.
 
